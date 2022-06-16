@@ -738,7 +738,6 @@ img{
     }
 
     .home__container{
-        height: 40vh;
         width: 94%;
         margin-top: 50px;
     }
@@ -785,7 +784,6 @@ img{
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 25px;
     }
     .collection{
         padding-top: 0;
