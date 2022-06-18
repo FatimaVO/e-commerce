@@ -55,7 +55,32 @@ const cartCountInfo = document.getElementById('cart-count-info')
 
 let cartItemId= 1
 
-let span = document.getElementById('cart-count-info')
+let span = document.querySelector('#cart-count-info')
+let contador = 0
+const botones = document.querySelectorAll('.btn')
+const valorClickProducto = document.getElementsByClassName("btn-primary")
+const valorClickQuitar = document.getElementsByClassName("mx-5")
+const valorClickVaciar= document.getElementsByClassName("vaciarC")
+
+console.log(cartCountInfo);
+
+
+
+/*botones.forEach(boton=>{
+    boton.addEventListener('click', function(e){
+        const estilos = e.target.classList
+        if(estilos.contains('.mx-5')){
+            contador--
+        }
+        if(estilos.contains('.btn-primary')){
+            contador++
+        }else{
+            contador=0
+        }
+    })
+    span.textContent= contador
+})
+*/
 
 
 
@@ -97,6 +122,12 @@ const showCart = (toggleIdCart, navIdCart) =>{
 }
 
 showMenu('nav-toggle-cart','nav-cart')
+
+domBotonVaciar.addEventListener("click", ()=>{
+    carrito.length=0
+    cargarCarrito()
+    guardarCarritoEnLocalStorage()
+})
 
 
 function cargarProductos() {
@@ -165,6 +196,7 @@ function cargarCarrito() {
         domCarrito.appendChild(cartNodo)
     });
     domTotal.textContent = calcularTotal()
+    cartCountInfo.innerText= carrito.length
 }
 
 
@@ -211,9 +243,13 @@ function cargarCarritoDeLocalStorage () {
 }
 
 
-domBotonVaciar.addEventListener('click', vaciarCarrito)
-
 cargarCarritoDeLocalStorage()
 cargarProductos()
 cargarCarrito()
 
+
+/*
+const valorClickProducto = document.getElementsByClassName("btn-primary")
+const valorClickQuitar = document.getElementsByClassName("mx-5")
+const valorClickVaciar= document.getElementsByClassName("vaciarC")
+*/
