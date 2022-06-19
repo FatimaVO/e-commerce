@@ -349,16 +349,16 @@ img{
 
 #cart-count-info{
     position: absolute;
-    top: 0;
-    right: 8px;
-    font-size: 12px;
-    width: 14px;
-    height: 14px;
+    top: -4px;
+    right: 6px;
+    font-size: 11px;
+    width: 15px;
+    height: 15px;
     background-color: var(--plus-color);
     border-radius: 10px;
     text-align: center;
     z-index: -3;
-    padding: 1%;
+    padding: 2%;
     color: wheat;
 }
 
