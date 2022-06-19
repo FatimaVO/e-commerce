@@ -103,16 +103,13 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     z-index: 500;
     background-color: rgb(55, 59, 63);
-    height: 100vh;
+    height: 700px;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
@@ -120,7 +117,6 @@ body {
     position: relative;
     width: 75px;
     height: 71px;
-    align-self: center;
 }
 
 .fig::after {
@@ -149,7 +145,7 @@ body {
 
 .disppear{
     animation: vanish 2s forwards;
-    
+    display: none;
 }
 
 @keyframes rotate {
@@ -941,8 +937,6 @@ img{
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
         z-index: 500;
         background-color: rgb(55, 59, 63);
         height: 100%;
@@ -951,21 +945,9 @@ img{
         justify-content: center;
         align-items: center;
     }
-}
 
-@media screen and (min-height: 900px) {
-    .loader{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 500;
-        background-color: rgb(55, 59, 63);
-        height: 650px;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .disppear{
+        animation: vanish 2s forwards;
+        display: none;
     }
 }

@@ -67,11 +67,13 @@ console.log(cartCountInfo);
 let loader = document.querySelector(".loader")
 console.log(loader);
 
-window.addEventListener("load", vanish)
-
-function vanish(){
-    loader.classList.add("disppear")
+window.onload= function(){
+    setTimeout(function(){
+        loader.classList.add("disppear")
+    }, 4000)
 }
+
+
 
 
 /*botones.forEach(boton=>{
