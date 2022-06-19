@@ -64,6 +64,14 @@ const valorClickVaciar= document.getElementsByClassName("vaciarC")
 
 console.log(cartCountInfo);
 
+let loader = document.querySelector(".loader")
+console.log(loader);
+
+window.addEventListener("load", vanish)
+
+function vanish(){
+    loader.classList.add("disppear")
+}
 
 
 /*botones.forEach(boton=>{

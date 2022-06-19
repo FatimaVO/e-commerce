@@ -99,6 +99,64 @@ body {
     flex-direction: column;
 }
 
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    background-color: rgb(55, 59, 63);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.fig {
+    position: relative;
+    width: 75px;
+    height: 71px;
+}
+
+.fig::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    width: 80px;
+    height: 40px;
+    border-radius: 0 0 50px 50px;
+    animation: move 0.5s linear infinite alternate;
+}
+
+.fig::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background: var(--first-color);
+    width: 24px;
+    height: 24px;
+    transform: translateX(-50%) rotate(0deg);
+    animation: rotate 2s linear infinite;
+}
+
+.disppear{
+    animation: vanish 2s forwards;
+    display: none;
+}
+
+@keyframes rotate {
+    100% { transform: translateX(-50%) rotate(360deg)}
+}
+
+@keyframes move {
+    0% { transform: rotate(10deg)}
+    100% { transform: rotate(-10deg)}
+}
+
 h1,h2,p{
     margin: 0;
 }
