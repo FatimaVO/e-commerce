@@ -70,28 +70,8 @@ console.log(loader);
 window.onload= function(){
     setTimeout(function(){
         loader.classList.add("disppear")
-    }, 4000)
+    }, 4000) 
 }
-
-
-
-
-/*botones.forEach(boton=>{
-    boton.addEventListener('click', function(e){
-        const estilos = e.target.classList
-        if(estilos.contains('.mx-5')){
-            contador--
-        }
-        if(estilos.contains('.btn-primary')){
-            contador++
-        }else{
-            contador=0
-        }
-    })
-    span.textContent= contador
-})
-*/
-
 
 
 const showMenu = (toggleId, navId) =>{
