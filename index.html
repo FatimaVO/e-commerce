@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Shop</title>
     <link rel="shortcut icon" href="./assets/images/cuero.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
     <div class="loader">
         <div class="fig"></div>
     </div>
     <header class="l-header">
         <nav class="nav bd-grid">
-            <div class= "nav__logDiv">
+            <div class="nav__logDiv">
                 <a href="#" class="nav__logo">
-                    <img class= icon src="./assets/images/cuero.png" alt="Corium">
+                    <img class=icon src="./assets/images/cuero.png" alt="Corium">
                 </a>
                 <p class="shop">Shop</p>
             </div>
             <div class="nav__menuL" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#Home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#Products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#products" class="nav__link">Products</a></li>
                 </ul>
             </div>
             <div class="nav__menu" id="nav-cart">
                 <div class="col-sm-4">
                     <ul id="carrito" class="list-group">
-<!--single item-->
+                        <!--single item-->
                         <!--<div class="cart-item">
                             <img src="./assets/images/correa.png" alt="item image" class="img-cart-item">
                             <div class="cart-item-info">
@@ -41,7 +44,7 @@
                             <button class="cart-item-del-btn"><i class='bx bx-trash' ></i></button>
                         </div>
                     -->
-    <!--single item-->
+                        <!--single item-->
                     </ul>
                     <p class="text-right" id="text-total-bold">Total: $ <span id="total"></span></p>
                     <button id="boton-vaciar" class="btn btn-danger vaciarC">Empty cart</button>
@@ -56,7 +59,7 @@
                         <span id="cart-count-info">0</span>
                     </button>
                 </div>
-                <i class='bx bx-menu nav__toggle' id="nav-toggle" ></i>
+                <i class='bx bx-menu nav__toggle' id="nav-toggle"></i>
             </div>
         </nav>
     </header>
@@ -65,97 +68,88 @@
             <div class="home__container bd-grid">
                 <div class="home__data">
                     <img src="./assets/images/Pliego_Trans.png" alt="" class="home__img">
-                    <h1 class="home__title">New Arrivals<br> <p class="title__promotion">25% Off Sitewide</p></h1>
-                    <a href="#featured" class="button" id="buttonHome">GO SHOPPING</a>
+                    <h1 class="home__title">New Arrivals<br>
+                        <p class="title__promotion">25% Off Sitewide</p>
+                    </h1>
+                    <a href="#products" class="button" id="buttonHome">GO SHOPPING</a>
                 </div>
             </div>
         </section>
         <section class="collection section">
+            <h2 class="titleSecion">CATEGORIES</h2>
             <div class="collection__container bd-grid">
-                <div class="collection__box">
-                    <div class="collection__data showAll">
-                        <a href="#">Show All</a>
-                            <p class="cat__desc">show all products</p> 
+                <div class="collection__box" id="collection__box">
+                    <div class="collection__data showAll filterSpan active" onclick="filterSelection('all')">
+                        <span class="filterName">Show All</span>
+                        <p class="cat__desc">show all products</p>
                     </div>
-                    <div class="collection__data glasses">
-                        <a href="#">Glasses Coat</a>
-                            <p class="cat__desc">3 products</p> 
+                    <div class="collection__data glassesGrid filterSpan" onclick="filterSelection('glasses')">
+                        <span class="filterName">Glasses Coat</span>
+                        <p class="cat__desc">3 products</p>
                     </div>
-                    <div class="collection__data camera">
-                        <a href="#">Camera Strap</a>
-                            <p class="cat__desc">5 products</p> 
+                    <div class="collection__data cameraGrid filterSpan" onclick="filterSelection('cameraStrap')">
+                        <span class="filterName">Camera Strap</span>
+                        <p class="cat__desc">5 products</p>
                     </div>
-                    <div class="collection__data portfolio">
-                        <a href="#">Portfolio</a>
-                            <p class="cat__desc">4 products</p> 
+                    <div class="collection__data portfolioGrid filterSpan" onclick="filterSelection('portfolio')">
+                        <span class="filterName">Portfolio</span>
+                        <p class="cat__desc">4 products</p>
                     </div>
-                    <div class="collection__data briefcase">
-                        <a href="#">Briefcase</a>
-                            <p class="cat__desc">4 products</p> 
+                    <div class="collection__data briefcaseGrid filterSpan" onclick="filterSelection('briefcase')">
+                        <span class="filterName">Briefcase</span>
+                        <p class="cat__desc">4 products</p>
                     </div>
-                    <div class="collection__data cardCase">
-                        <a href="#">Card case</a>
-                            <p class="cat__desc">7 products</p> 
+                    <div class="collection__data cardCaseGrid filterSpan" onclick="filterSelection('cardCase')">
+                        <span class="filterName">Card case</span>
+                        <p class="cat__desc">7 products</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="row section">
-            <section id="items" class="col-sm-8 row">
-                <div>
+        <section class="row section" id="products">
+            <h2 class="titleSecionProducts">PRODUCTS</h2>
+            <section id="items" class="col-sm-8 row mixer-container">
 
-                </div>
                 
             </section>
         </section>
     </main>
 
-
-    <section class="newsletter" id="suscribed">
-        <div class="newsletter__container bd-grid">
-            <div class="newsletter__suscribe">
-                <h2 class="section-title">OUR NEWSLETTER
-                </h2>
-                <p class="newsletter__description">Promotion new products and sales. Directly to your </p>
-                <form action="" class="newsletter__form">
-                    <input class="inputText" type="text" class="newsletter__input" placeholder="Email">
-                    <a href="#" class="buttonText">SUSCRIBE</a>
-                </form>
-            </div>
-        </div>
-    </section>
     <footer class="footer section">
         <div class="footer__container bd-grid">
-            <img class= "icon__footer" src="./assets/images/leatherw.png" alt="icon">
+            <img class="icon__footer" src="./assets/images/leatherw.png" alt="icon">
             <div class="footer__box">
                 <h3 class="footer__title">
                     EXPLORE
                 </h3>
                 <ul>
                     <li><a href="#" class="footer__link">Home</a></li>
-                    <li><a href="#" class="footer__link">Products</a></li>
-                    <li><a href="#" class="footer__link">Suscribe</a></li>
+                    <li><a href="#products" class="footer__link">Products</a></li>
                 </ul>
             </div>
             <div class="footer__box">
                 <h3 class="footer__title">
-                OUR SERVICES
+                    OUR SERVICES
                 </h3>
                 <ul>
-                    <li><a href="#" class="footer__link">Free shipping</a></li>
-                    <li><a href="#" class="footer__link">Gift cards</a></li>
+                    <li class="footer__linkUl">Free shipping</li>
+                    <li class="footer__linkUl">Gift cards</li>
                 </ul>
             </div>
             <div class="footer__box">
                 <h3 class="footer__title">
-                FOLLOW
+                    FOLLOW
                 </h3>
-                <a href="#" class="footer__social"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
-                <a href="#" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.facebook.com/academlo" target="_blank" rel="noopener noreferrer" class="footer__social"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/AcademloHQ" target="_blank" rel="noopener noreferrer" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/academlohq/" target="_blank" rel="noopener noreferrer" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
             </div>
         </div>
+        <span class="madeIn">Made with <i class="fa-solid fa-heart"></i> in Academlo </span>
     </footer>
+    <script src="./assets/js/mixitup.min.js"></script>
+
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
