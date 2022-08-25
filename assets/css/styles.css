@@ -584,8 +584,8 @@ img {
 }
 
 .img-item {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: auto;
     object-fit: contain;
 }
 
@@ -599,7 +599,7 @@ img {
     justify-content: center;
     align-items: center;
     width: 250px;
-    height: 340px;
+    height: 360px;
     border: solid rgb(209, 209, 209) 1px;
 }
 
@@ -626,10 +626,32 @@ img {
 
 
 .card-body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 65% auto auto 40px ;
+    grid-template-areas: 
+    "image"
+    "title"
+    "price"
+    "button";
+    height: 360px;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
+}
+
+.img-item{
+    grid-area: image;
+}
+
+.card-title{
+    grid-area: title;
+}
+
+.card-text{
+    grid-area: price;
+}
+
+.btn-primary{
+    grid-area: button;
 }
 
 .card__info {
@@ -825,16 +847,17 @@ footer{
         display: grid;
         grid-template-areas:
             "title img"
-            "subtitle ."
-            "button .";
+            "button img";
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 50% 50%;
         width: 100%;
-        justify-content: center;
-        align-items: center;
+        justify-items: center;
+    align-items: center;
     }
 
     .home__title {
         grid-area: title;
-        font-size: 50px;
+        font-size: 55px;
         width: 380px;
         margin-left: 20px;
         text-align: center;
@@ -851,6 +874,7 @@ footer{
     #buttonHome {
         grid-area: button;
         justify-self: center;
+        font-size: 18px;
     }
 
     .collection__box {
@@ -875,13 +899,6 @@ footer{
         flex-wrap: wrap;
     }
 
-    .btn-primary {
-        width: 200px;}
-
-    .card {
-        width: 200px;
-        margin: 20px;
-    }
 
     .bxs-plus-circle {
         color: var(--plus-color);
@@ -968,5 +985,11 @@ footer{
     .disppear {
         animation: vanish 2s forwards;
         display: none;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .home__title{
+        font-size: 65px;
     }
 }

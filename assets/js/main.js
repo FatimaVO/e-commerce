@@ -3,45 +3,45 @@
 const baseDeDatos = [
     {
         id: 1,
-        name: 'Glasses Coat',
+        name: 'H&D Glasses Coat',
         price: 40.00,
-        image: './assets/images/GC01+copy.png',
+        image: './assets/images/glassesCoat.png',
         category: 'Glasses Coat',
         quantity: 3,
         filter: 'glasses'
     },
     {
         id: 2,
-        name: 'Camera Strap',
+        name: 'TARION Camera Strap',
         price: 20.00,
-        image: './assets/images/correa.png',
+        image: './assets/images/strap.png',
         category: 'Camera Strap',
         quantity: 5,
         filter: 'cameraStrap'
     },
     {
         id: 3,
-        name: 'Briefcase',
+        name: 'KPL Briefcase',
         price: 240.00,
-        image: './assets/images/Pliego_Trans.png',
+        image: './assets/images/briefcase.png',
         category: 'Briefcase',
         quantity: 4,
         filter: 'briefcase'
     },
     {
         id: 4,
-        name: 'Portfolio',
+        name: 'H&D Portfolio',
         price: 60.00,
-        image: './assets/images/cartera.png',
+        image: './assets/images/portfolio.png',
         category: 'Portfolio',
         quantity: 4,
         filter: 'portfolio'
     },
     {
         id: 5,
-        name: 'Card case',
+        name: 'H&D Card case',
         price: 30.00,
-        image: './assets/images/Classic+Card.png',
+        image: './assets/images/cardCase.png',
         category: 'Card case',
         quantity: 7,
         filter: 'cardCase'
