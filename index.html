@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Shop</title>
-    <link rel="shortcut icon" href="./assets/images/cuero.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/prickly-pear.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
@@ -20,7 +22,7 @@
         <nav class="nav bd-grid">
             <div class="nav__logDiv">
                 <a href="#" class="nav__logo">
-                    <img class=icon src="./assets/images/cuero.png" alt="Corium">
+                    <img class=icon src="./assets/images/prickly-pear-g.png" alt="Corium">
                 </a>
                 <p class="shop">Shop</p>
             </div>
@@ -33,18 +35,6 @@
             <div class="nav__menu" id="nav-cart">
                 <div class="col-sm-4">
                     <ul id="carrito" class="list-group">
-                        <!--single item-->
-                        <!--<div class="cart-item">
-                            <img src="./assets/images/correa.png" alt="item image" class="img-cart-item">
-                            <div class="cart-item-info">
-                                <h3 class="cart-item-name">Camera Strap</h3>
-                                <span class="cart-item-category">Stock: 5</span>
-                                <span class="cart-item-price">$20.00</span>
-                            </div>
-                            <button class="cart-item-del-btn"><i class='bx bx-trash' ></i></button>
-                        </div>
-                    -->
-                        <!--single item-->
                     </ul>
                     <p class="text-right" id="text-total-bold">Total: $ <span id="total"></span></p>
                     <button id="boton-vaciar" class="btn btn-danger vaciarC">Empty cart</button>
@@ -67,11 +57,41 @@
         <section class="home" id="home">
             <div class="home__container bd-grid">
                 <div class="home__data">
-                    <img src="./assets/images/briefcase.png" alt="" class="home__img">
+                    <img src="./assets/images/little-bag.png" alt="" class="home__img">
                     <h1 class="home__title">New Arrivals<br>
                         <p class="title__promotion">25% Off Sitewide</p>
                     </h1>
                     <a href="#products" class="button" id="buttonHome">GO SHOPPING</a>
+                </div>
+            </div>
+        </section>
+        <section class="information">
+            <div class="informationCard">
+                <i class="fa-solid fa-leaf"></i>
+                <div>
+                    <b>Vegan Cactus Leather</b>
+                    <p>We only use sustainable materials.</p>
+                </div>
+            </div>
+            <div class="informationCard">
+                <i class="fa-solid fa-plane"></i>
+                <div>
+                    <b>Worldwide Shipping</b>
+                    <p>Free on some products and destinations</p>
+                </div>
+            </div>
+            <div class="informationCard">
+                <i class="fa-solid fa-lock"></i>
+                <div>
+                    <b>100% Payment Secure</b>
+                    <p>We ensure secure payment gateway</p>
+                </div>
+            </div>
+            <div class="informationCard">
+                <i class="fa-solid fa-tree"></i>
+                <div>
+                    <b>One for One Program</b>
+                    <p>We plant a tree for every product you buy</p>
                 </div>
             </div>
         </section>
@@ -83,20 +103,21 @@
                         <span class="filterName">Show All</span>
                         <p class="cat__desc">show all products</p>
                     </div>
-                    <div class="collection__data glassesGrid filterSpan" onclick="filterSelection('glasses')">
-                        <span class="filterName">Glasses Coat</span>
+                    <div class="collection__data bagGrid filterSpan" onclick="filterSelection('bag')">
+                        <span class="filterName">Bag</span>
                         <p class="cat__desc">stock: 3</p>
                     </div>
-                    <div class="collection__data cameraGrid filterSpan" onclick="filterSelection('cameraStrap')">
-                        <span class="filterName">Camera Strap</span>
+                    <div class="collection__data notebookCoverGrid filterSpan"
+                        onclick="filterSelection('notebookCover')">
+                        <span class="filterName">Notebook cover</span>
                         <p class="cat__desc">stock: 5</p>
                     </div>
-                    <div class="collection__data portfolioGrid filterSpan" onclick="filterSelection('portfolio')">
-                        <span class="filterName">Portfolio</span>
+                    <div class="collection__data purseGrid filterSpan" onclick="filterSelection('purse')">
+                        <span class="filterName">Purse</span>
                         <p class="cat__desc">stock: 4</p>
                     </div>
-                    <div class="collection__data briefcaseGrid filterSpan" onclick="filterSelection('briefcase')">
-                        <span class="filterName">Briefcase</span>
+                    <div class="collection__data shoesGrid filterSpan" onclick="filterSelection('shoes')">
+                        <span class="filterName">Shoes</span>
                         <p class="cat__desc">stock: 4</p>
                     </div>
                     <div class="collection__data cardCaseGrid filterSpan" onclick="filterSelection('cardCase')">
@@ -110,14 +131,14 @@
             <h2 class="titleSecionProducts">PRODUCTS</h2>
             <section id="items" class="col-sm-8 row mixer-container">
 
-                
+
             </section>
         </section>
     </main>
 
     <footer class="footer section">
         <div class="footer__container bd-grid">
-            <img class="icon__footer" src="./assets/images/leatherw.png" alt="icon">
+            <img class="icon__footer" src="./assets/images/prickly-pear-w.png" alt="icon">
             <div class="footer__box">
                 <h3 class="footer__title">
                     EXPLORE
@@ -140,15 +161,16 @@
                 <h3 class="footer__title">
                     FOLLOW
                 </h3>
-                <a href="https://www.facebook.com/academlo" target="_blank" rel="noopener noreferrer" class="footer__social"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="https://twitter.com/AcademloHQ" target="_blank" rel="noopener noreferrer" class="footer__social"><i class='bx bxl-twitter'></i></a>
-                <a href="https://www.instagram.com/academlohq/" target="_blank" rel="noopener noreferrer" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.facebook.com/academlo" target="_blank" rel="noopener noreferrer"
+                    class="footer__social"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/AcademloHQ" target="_blank" rel="noopener noreferrer"
+                    class="footer__social"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/academlohq/" target="_blank" rel="noopener noreferrer"
+                    class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
             </div>
         </div>
         <span class="madeIn">Made with <i class="fa-solid fa-heart"></i> in Academlo </span>
     </footer>
-    <script src="./assets/js/mixitup.min.js"></script>
-
     <script src="./assets/js/main.js"></script>
 </body>
 

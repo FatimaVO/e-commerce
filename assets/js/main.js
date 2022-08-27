@@ -3,44 +3,44 @@
 const baseDeDatos = [
     {
         id: 1,
-        name: 'H&D Glasses Coat',
-        price: 40.00,
-        image: './assets/images/glassesCoat.png',
-        category: 'Glasses Coat',
+        name: 'Montalvo Farret Bag',
+        price: 200.00,
+        image: './assets/images/little-bag-side.png',
+        category: 'Bag',
         quantity: 3,
-        filter: 'glasses'
+        filter: 'bag'
     },
     {
         id: 2,
-        name: 'TARION Camera Strap',
-        price: 20.00,
-        image: './assets/images/strap.png',
-        category: 'Camera Strap',
+        name: 'S. Playa notebook cover',
+        price: 80.00,
+        image: './assets/images/notebook-cover.png',
+        category: 'Notebook cover',
         quantity: 5,
-        filter: 'cameraStrap'
+        filter: 'notebookCover'
     },
     {
         id: 3,
-        name: 'KPL Briefcase',
+        name: 'Derby Shoes',
         price: 240.00,
-        image: './assets/images/briefcase.png',
-        category: 'Briefcase',
+        image: './assets/images/shoes.png',
+        category: 'Shoes',
         quantity: 4,
-        filter: 'briefcase'
+        filter: 'shoes'
     },
     {
         id: 4,
-        name: 'H&D Portfolio',
-        price: 60.00,
-        image: './assets/images/portfolio.png',
-        category: 'Portfolio',
+        name: 'Montalvo Farret Purse',
+        price: 100.00,
+        image: './assets/images/purse.png',
+        category: 'Purse',
         quantity: 4,
-        filter: 'portfolio'
+        filter: 'purse'
     },
     {
         id: 5,
         name: 'H&D Card case',
-        price: 30.00,
+        price: 50.00,
         image: './assets/images/cardCase.png',
         category: 'Card case',
         quantity: 7,
@@ -289,10 +289,3 @@ function cargarCarritoDeLocalStorage() {
 cargarCarritoDeLocalStorage()
 cargarProductos()
 cargarCarrito()
-
-
-/*
-const valorClickProducto = document.getElementsByClassName("btn-primary")
-const valorClickQuitar = document.getElementsByClassName("mx-5")
-const valorClickVaciar= document.getElementsByClassName("vaciarC")
-*/
